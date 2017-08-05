@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "ZXDatePicker.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 @end
 
@@ -17,6 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+- (IBAction)timePick:(id)sender {
+    [ZXDatePicker datePickerViewWithType:DatePicerTypeDateAndTime andChoiceBlock:^(NSString *choiceDate) {
+        self.timeLabel.text = choiceDate;
+    }];
 }
 
 

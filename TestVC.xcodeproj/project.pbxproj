@@ -13,6 +13,7 @@
 		5F320D711F35C0BC00C5D3D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F320D6F1F35C0BC00C5D3D9 /* Main.storyboard */; };
 		5F320D731F35C0BC00C5D3D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F320D721F35C0BC00C5D3D9 /* Assets.xcassets */; };
 		5F320D761F35C0BC00C5D3D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F320D741F35C0BC00C5D3D9 /* LaunchScreen.storyboard */; };
+		5F320D7F1F35C11F00C5D3D9 /* ZXDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F320D7E1F35C11F00C5D3D9 /* ZXDatePicker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		5F320D721F35C0BC00C5D3D9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F320D751F35C0BC00C5D3D9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F320D771F35C0BC00C5D3D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F320D7D1F35C11F00C5D3D9 /* ZXDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZXDatePicker.h; sourceTree = "<group>"; };
+		5F320D7E1F35C11F00C5D3D9 /* ZXDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZXDatePicker.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,8 @@
 				5F320D721F35C0BC00C5D3D9 /* Assets.xcassets */,
 				5F320D741F35C0BC00C5D3D9 /* LaunchScreen.storyboard */,
 				5F320D771F35C0BC00C5D3D9 /* Info.plist */,
+				5F320D7D1F35C11F00C5D3D9 /* ZXDatePicker.h */,
+				5F320D7E1F35C11F00C5D3D9 /* ZXDatePicker.m */,
 				5F320D661F35C0BC00C5D3D9 /* Supporting Files */,
 			);
 			path = TestVC;
@@ -110,6 +115,7 @@
 				TargetAttributes = {
 					5F320D621F35C0BC00C5D3D9 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = VU7C9LPCXH;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -153,6 +159,7 @@
 				5F320D6E1F35C0BC00C5D3D9 /* ViewController.m in Sources */,
 				5F320D6B1F35C0BC00C5D3D9 /* AppDelegate.m in Sources */,
 				5F320D681F35C0BC00C5D3D9 /* main.m in Sources */,
+				5F320D7F1F35C11F00C5D3D9 /* ZXDatePicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VU7C9LPCXH;
 				INFOPLIST_FILE = TestVC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.byztl.TestVC;
@@ -285,6 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VU7C9LPCXH;
 				INFOPLIST_FILE = TestVC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.byztl.TestVC;
