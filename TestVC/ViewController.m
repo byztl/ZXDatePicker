@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ZXDatePicker.h"
+#import <objc/runtime.h>
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
@@ -18,7 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    NSArray *arr = [self filterPropertys];
+    NSLog(@"%@",arr);
 }
 - (IBAction)timePick:(id)sender {
     [ZXDatePicker datePickerViewWithType:DatePicerTypeDateAndTime andChoiceBlock:^(NSString *choiceDate) {
@@ -26,6 +28,22 @@
     }];
 }
 
+
+- (NSArray *)filterPropertys
+{
+    NSMutableArray *props = [NSMutableArray array];
+    unsigned int outCount, i;
+    objc_property_t *properties = class_copyPropertyList([self class], &outCount);
+    for (i = 0; i<outCount; i++)
+    {
+        objc_property_t property = *properties;
+        const char* char_f =property_getName(property);
+        NSString *propertyName = [NSString stringWithUTF8String:char_f];
+        [props addObject:propertyName];
+    }
+    free(properties);
+    return props;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
